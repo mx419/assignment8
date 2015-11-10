@@ -43,6 +43,7 @@ class make_single_day_inverstment(object):
                 daily_ret[trial] = (cumu_ret[trial]/1000.0) - 1
             fig = plt.figure()
             plt.hist(daily_ret,100,range=[-1,1])
+            plt.xlim(-1,1)
             plt.title('histogram of '+str(positions_list[position_i]) + ' position')
             plt.xlabel('daily return for unit investment')
             plt.ylabel('frequency')
